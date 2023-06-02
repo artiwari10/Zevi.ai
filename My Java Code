@@ -11,16 +11,21 @@ public class Main
 	    }
 	    if(temp!=0) {
 	        getBlog(a,temp);
+	        countp=i;
+	        
+	        return;
 	    }
 	    System.out.println();
 	    countp=i;
 	}	
 	static public void getBlog(int a, int b){
 	    int i;
-	    for(i=countb;i<countb+b && i < blog.length ;i++) {
+	   
+	    for(i=countb;i<countb+b && i < blog.length ;) {
 	         System.out.print(blog[i]+" ");
+	         i++;
 	    }
-	    i=countb;
+	    countb=i;
 	    System.out.println();
 	}
 	static public void paginatin(int a,int b) {
