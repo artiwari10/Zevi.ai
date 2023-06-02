@@ -1,0 +1,39 @@
+import java.util.*;
+public class Main
+{
+    static String[] product={"P1","P2","P3","P4","P5"};
+	static String[] blog={"B1","B2","B3","B4","B5"};
+	static int countp=0,countb=0;
+	static void getProducts(int a,int b){
+	    int i,temp=b;
+	    for(i=countp;i<product.length && i<(countp+b);i++,temp--) {
+	        System.out.print(product[i]+" ");
+	    }
+	    if(temp!=0) {
+	        getBlog(a,temp);
+	    }
+	    System.out.println();
+	    countp=i;
+	}	
+	static public void getBlog(int a, int b){
+	    int i;
+	    for(i=countb;i<countb+b && i < blog.length ;i++) {
+	         System.out.print(blog[i]+" ");
+	    }
+	    i=countb;
+	    System.out.println();
+	}
+	static public void paginatin(int a,int b) {
+	    if(countp>=product.length) {
+	        getBlog(a,b);
+	    }
+	    else {
+	        getProducts(a,b);
+	    }
+	}
+	public static void main(String[] args) {
+		paginatin(1,3);
+		paginatin(1,3);
+		paginatin(1,3);
+	}
+}
