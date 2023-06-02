@@ -1,0 +1,49 @@
+Code Provided :
+//////////////////////////////////////////////////////////////
+////////////////// NO CHANGES REQUIRED HERE //////////////////
+//////////////////////////////////////////////////////////////
+const products = ["p1", "p2", "p3", "p4", "p5"];
+const blogs = ["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b7", "b8"];
+
+const getProducts = (from, limit) => {
+  return {
+    count: products.length,
+    result: products.slice(from - 1, from - 1 + limit)
+  }
+};
+
+const getBlogs = (from, limit) => {
+  return {
+    count: blogs.length,
+    result: blogs.slice(from - 1, from - 1 + limit)
+  };
+};
+//////////////////////////////////////////////////////////////
+////////////////// NO CHANGES REQUIRED HERE //////////////////
+//////////////////////////////////////////////////////////////
+
+
+//////////////////// WHITE YOUR CODE HERE ////////////////////
+
+
+
+
+const paginate = (page, limit) => {
+  // write your code here
+  console.log(getProducts(1,2))
+  console.log(getBlogs(4,3))
+}
+
+
+
+//////////////////// WHITE YOUR CODE HERE ////////////////////
+
+
+paginate(1,3) // [p1, p2, p3]
+paginate(2,3) // [p4, p5, b1]
+paginate(3,3) // [b2, b3, b4]
+
+
+
+
+
